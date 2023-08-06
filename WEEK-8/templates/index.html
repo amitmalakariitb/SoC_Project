@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ESRGAN Website</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 20px;
+        padding: 0;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      form {
+        width: 400px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      }
+
+      label {
+        display: block;
+        font-size: 16px;
+        margin-bottom: 10px;
+        color: #333;
+      }
+
+      input[type="file"] {
+        display: block;
+        margin-bottom: 20px;
+      }
+
+      input[type="submit"] {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #0056b3;
+      }
+
+      input[type="submit"]:focus {
+        outline: none;
+      }
+
+      input[type="submit"]:active {
+        background-color: #0042a3;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>ESRGAN Website</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <label for="file">Select a low-resolution image to upscale:</label>
+      <input type="file" id="file" name="file" accept=".jpg, .jpeg, .png" />
+      <input type="submit" value="Upscale Image" />
+    </form>
+  </body>
+</html>
